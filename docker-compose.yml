@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  tspi-builder:
+    image: caojunjun/tspienv:latest
+    container_name: tspienv
+    privileged: true
+    command: /bin/bash
+    stdin_open: true
+    tty: true
+    ports:
+      - "23:22"
+    volumes:
+      - "./:/home/work"
+    working_dir: /home/work
