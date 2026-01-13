@@ -1,0 +1,7 @@
+{
+  "name": "Tspi SDK Dev Container",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "tspi-builder",
+  "workspaceFolder": "/home/work/",
+  "remoteUser": "root"
+}

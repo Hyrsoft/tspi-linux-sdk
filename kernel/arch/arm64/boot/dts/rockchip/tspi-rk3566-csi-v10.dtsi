@@ -29,7 +29,7 @@
 };
 //摄像头D-PHY接口
 &csi2_dphy0 {
-	status = "okay";
+	status = "disabled";
 	/*
 	 * dphy0 only used for full mode,
 	 * full mode and split mode are mutually exclusive
@@ -65,7 +65,7 @@
 
 //摄像头D-PHY接口
 &csi2_dphy1 {
-	status = "disabled";
+	status = "okay";
 
 	/*
 	 * dphy1 only used for split mode,
@@ -230,7 +230,7 @@
 
 		isp0_in: endpoint@0 {
 			reg = <0>;
-			remote-endpoint = <&dphy0_out>;
+			remote-endpoint = <&dphy1_out>;
 		};
 	};
 };
@@ -239,7 +239,7 @@
 	/* i2c4 sda conflict with camera pwdn */
 	status = "okay";
 	ov5695: ov5695@36 {
-		status = "disabled";
+		status = "okay";
 		compatible = "ovti,ov5695";
 		reg = <0x36>;
 		clocks = <&cru CLK_CIF_OUT>;
